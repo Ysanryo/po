@@ -1,0 +1,456 @@
+.wrapper {
+ display: flex;
+  position: relative;
+  width: 100%;
+   min-height: 100vh;
+  
+}
+
+.wrapper:before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(116,17,19,1) 87%);
+    background-size: cover; /*--背景画像のサイズ--*/
+    background-attachment: fixed; /*--背景画像の固定--*/
+    background-repeat: no-repeat; /*--背景画像の繰り返し--*/
+    background-position: center center; /*--背景画像の位置--*/
+    
+    overflow-x: hidden;
+    font-family: "Century" ,"游明朝" ;
+
+}
+.example2{
+    width: 100%;
+    padding-top: 56%;
+    background: 
+        url(logo.jpg) no-repeat center / 50% auto,
+         url(chara4.png)  no-repeat right center / 41% auto,
+         url(dragon5.png) no-repeat left center  / 51% auto ,
+         
+        url(haikei1.jpg) no-repeat center center / cover;
+}
+
+.randomBox,.randomScroll{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+      /*コレ*/align-items: center;
+    /*コレ*/justify-content: center;
+    margin: 10px;
+}
+
+
+.img-box{
+ top: 10%;
+margin-top: 200px;
+margin-bottom: 300px;
+  text-align: center;
+    }
+    
+    dl{
+  background:#eee;
+  padding:10px;
+  width:550px;
+   margin-right: auto;
+margin-left: 10%;
+}
+
+dt{
+  color:navy;
+  font-weight:bold;
+  padding:0 10px 0 0;
+  width:120px;
+  float:left;
+  margin-bottom:7px;
+}
+
+dd{
+  color:#333;
+  margin-bottom:7px;
+}
+
+dl::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+*,body,ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+h1{
+font-family: "Century" ;
+color:#c9caca;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right: auto;
+margin-left: 5%;
+}
+
+h2{
+font-family: "游明朝" ;
+text-align: center;
+font-size: 60px;
+color: #000000;
+  text-shadow: 1px 2px 5px #fffff0;
+}
+.absolute-footer {
+margin-top: auto;
+
+}
+/* スライドショーアニメーション */
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+    position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+/*　背景画像設定　*/
+
+.slider-item01 {
+    background:url(slide1.png);
+}
+
+.slider-item02 {
+    background:url(slide2.png);
+}
+
+.slider-item03 {
+    background:url(slide3.png);
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:75vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+	z-index: 3;
+    top: 38%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+	position: relative;
+	z-index: 5;
+    text-align:center;
+	margin:-50px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:15px;/*ドットボタンのサイズ*/
+    height:15px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+/* スライドショーアニメーションEND */
+
+/* ローディングアニメーション */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1.5s 2.5s forwards;
+  background-color: black;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+}
+
+.loading__logo {
+  opacity: 0;
+  animation: logo_fade 2s 0.5s forwards;
+  width: 175px;
+}
+
+@keyframes logo_fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*========= ページトップのためのCSS ===============*/
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:30px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(150px);
+}
+
+/*　上に上がる動き　*/
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(150px);
+  }
+}
+
+/*画像の切り替えと動き*/
+#page-top a {
+    /*aタグの形状*/
+	display: block;
+	width: 100px;
+	height: 100px;
+	color: #fffafa;
+	
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:1rem;
+    /*背景画像の指定*/
+	background: url("mahouzin13.png") no-repeat center;
+	background-size: contain;
+}
+
+#page-top.floatAnime a{
+	width:780px;
+	height: 585px;
+	
+    /*背景画像の指定*/
+	background: url("dragon1.png") no-repeat center;
+	background-size: 100%;
+	text-align: center;
+    /*アニメーションの指定*/
+	animation: floatAnime 2s linear infinite;
+	opacity: 0;
+}
+#page-top.floatAnime span{
+    position: absolute;
+    bottom: 10px;
+    right: 350px;
+white-space:nowrap;
+  color:#fffaf0;
+}
+
+
+@keyframes floatAnime {
+  0% { transform: translateX(0); opacity: 0; }
+  25% { transform: translateX(-6px);opacity: 1; }
+  50% { transform: translateX(0) }
+  100% { transform: translateX(6px);opacity: 1; }
+}
+
+/*Page Topと書かれたテキストの位置*/
+#page-top span{
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+white-space:nowrap;
+  color:#fffaf0;
+}
+
+/*検証のためのCSS*/
+section{
+padding: 500px 0;
+}
+
+/*ランダム出現*/
+/*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+
+.box{
+	opacity: 0;
+}
+
+/*==================================================
+動かしたい動き（今回は” ふわっ” を採用）
+===================================*/
+
+.fadeLeft{
+animation-name:fadeLeftAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeLeftAnime{
+  from {
+    opacity: 0;
+	transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateX(0);
+  }
+}
+
+#footer{
+  background:#333;
+  position: relative;
+  z-index: 2;
+  padding:100px 20px;
+
+}
+
+
+/*モータル*/
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider2 img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider2 .slick-slide {
+    margin:0 10px;/*スライド左右の余白調整*/
+}
+
+.slider3 img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider3 .slick-slide {
+    margin:0 10px;/*スライド左右の余白調整*/
+}
+

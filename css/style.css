@@ -1,0 +1,311 @@
+body {
+margin: 
+  0;
+padding: 
+  0;
+}
+@keyframes bg-color {
+  0% { 
+  background-color: 
+    #e74c3c;
+  }
+  20% { 
+  background-color: 
+    #f1c40f;
+  }
+  40% { 
+  background-color: 
+    #1abc9c;
+  }
+  60% { 
+  background-color: 
+    #3498db;
+  }
+  80% { 
+  background-color: 
+    #9b59b6;
+  }
+  100% { 
+  background-color: 
+    #e74c3c;
+  }
+}
+
+h1 {
+font-family: 
+  Meiryo, "Hiragino Kaku Gothic Pro W3", sans-serif;
+text-align: 
+  center;
+font-size:
+  150px;
+color:
+  #fffafa;
+}
+
+.title {
+background-color: 
+  #f0f0f0; 
+animation: 
+  bg-color 30s infinite;
+display: 
+  flex;
+justify-content: 
+  center;
+align-items: 
+  center;
+height: 
+  500px;
+width: 
+  100vw;
+}
+
+
+
+
+.menu-btn {
+position: 
+  fixed;
+top: 
+  10px;
+right: 
+  10px;
+display: 
+  flex;
+height: 
+  60px;
+width: 
+  60px;
+justify-content: 
+  center;
+align-items: 
+  center;
+z-index: 
+  90;
+background-color: 
+  #3584bb;
+}
+.menu-btn span, 
+  .menu-btn span:
+before, 
+  .menu-btn span:
+after {
+content: 
+  '';
+display: 
+  block;
+height: 
+  3px;
+width: 
+  25px;
+border-radius: 
+  3px;
+background-color: 
+  #ffffff;
+position: 
+  absolute;
+}
+.menu-btn span:
+before {
+bottom: 
+  8px;
+}
+.menu-btn span:
+after {
+top: 
+  8px;
+}
+
+ul.gnav-navi-1 {
+background: 
+  #c71585;
+padding: 
+  0;
+text-align: 
+  center;
+}
+ul.gnav-navi-1 li {
+display: 
+  inline-block;
+}
+
+
+ul.gnav-navi-1 li a {
+display: 
+  block;
+padding: 
+  1em;
+color: 
+  #fff;
+text-decoration: 
+  none;
+}
+::ul.gnav-navi-1 afirst-line {
+font-size: 
+  15px;
+font-weight: 
+  bold;
+}
+
+.logo {
+width: 
+  350px;
+}
+
+
+
+.main-nav {
+display: 
+  flex;
+font-size: 
+  1.25rem;
+text-transform: 
+  uppercase;
+margin-top: 
+  35px;
+margin-right : 
+  70px;
+list-style: 
+  none;
+}
+.main-nav li {
+margin-left: 
+  50px;
+}
+.main-nav a {
+color: 
+  #432;
+}
+.main-nav a:
+hover {
+color: 
+  #0bd;
+}
+
+.main-nav a:
+hover {
+color: 
+  #0bd;
+}
+
+
+.page-header {
+display: 
+  flex;
+justify-content: 
+  space-between;
+}
+
+
+footer {
+background: 
+  #432;
+text-align: 
+  center;
+padding: 
+  25px 0;
+margin-top: 
+  50px;
+}
+footer p {
+color: 
+  #FFF;
+font-size: 
+  0.875rem;
+}
+
+h2 {
+margin-left: 
+  25px;
+}
+
+p {
+margin-left: 
+  50px;
+}
+
+.skill {
+margin-left: 
+  75px;
+}
+
+.skill li {
+font-size:
+  20px;
+line-height:
+  40px;
+}
+
+.flex {
+display: 
+  flex;
+justify-content: 
+  space-between;
+align-items: 
+  center;
+}
+.flex>p {
+width: 
+  49%;
+}
+
+.zoom_img img {
+margin-left: 
+  100px;
+transform: 
+  scale(1);
+transition: 
+  .3s ease-in-out;
+}
+
+.zoom_img a:
+hover img {
+transform: 
+  scale(1.2);
+}
+
+
+.mask {
+display: 
+  block;
+line-height: 
+  0;
+overflow: 
+  hidden;
+}
+
+.name {
+font-size:
+  20px;
+margin-left: 
+  125px;
+}
+
+@media (max-width: 
+670px) {
+  .main-nav {
+  font-size: 
+    1rem;
+  margin-top: 
+    10px;
+  }
+  .main-nav li {
+  margin: 
+    0 20px;
+  }
+  .page-header {
+  flex-direction: 
+    column;
+  align-items: 
+    center;
+  }
+  .name {
+  font-size:
+    20px;
+  margin-left: 
+    80px;
+  }
+  .zoom_img img {
+  margin-left: 
+    50px;
+  }
+}  
